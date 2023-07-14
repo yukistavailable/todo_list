@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 export default function Home() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   function addTask() {
     const task: string = inputRef.current?.value ?? "";
